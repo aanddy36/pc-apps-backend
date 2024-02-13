@@ -1,0 +1,21 @@
+{
+  "name": "pc-apps-backend",
+  "version": "1.0.0",
+  "description": "Express server created for sending safe emails for the PC APPS website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Andres Del Chiaro",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "resend": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

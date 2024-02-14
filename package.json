@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Express server created for sending safe emails for the PC APPS website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"

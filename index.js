@@ -9,6 +9,10 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.json({ msg: "Hola" });
+});
+
 app.post("/", async (req, res) => {
   const resend = new Resend(process.env.TESTING_RESEND_KEY);
   const { name, email, phone, message } = req.body;
@@ -31,8 +35,8 @@ app.post("/", async (req, res) => {
   }
 });
 
-const PORT = process.env.MY_PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log("Server iniciado");
 });

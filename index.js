@@ -17,6 +17,7 @@ app.post("/", async (req, res) => {
   const resend = new Resend(process.env.RESEND_KEY);
   const { name, email, phone, message } = req.body;
   const emailHtml = createEmail(name, email, phone, message);
+  
   try {
     const { data, error } = await resend.emails.send({
       from: "Contacto PC APPS <onboarding@resend.dev>",

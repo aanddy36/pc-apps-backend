@@ -2,79 +2,40 @@ export const createEmail = (name, email, phone, message) => {
   return `
     <html>
       <head>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-          }
-          .container {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            display:flex;
-            flex-direction:column;
-            gap:20px;
-          }
-          .title-cont{
-              background-color: #002c69;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 6px;
-              color: #fff;
-              padding: 20px 0;
-            }
-          .title-cont h3{
-            font-style:italic;
-            }
-          .email{
-            display: flex;
-            flex-direction: column;
-            padding:0 20px;
-       
-            }
-          .single{
-              display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:5px;
-            width:fit-content;
-          }
-          .msj{
-              padding:0 20px;
-            text-align: justify;
-          }
-        </style>
       </head>
       <body>
-        <div class="container">
-            <div class="title-cont">
-                <h1>PC APPS</h1>
-                <h3>¡Un nuevo usuario quieren contactarse con usted!</h3>
-            </div>
-            
-              <section class="email">
-                <div class="single">
-                      <h4>Nombre:</h4>
-                      <p>${name}</p>
-                </div>
-                <div class="single">
-                      <h4>Email:</h4>
-                     <p>${email}</p>
-                </div>
-                <div class="single">
-                      <h4>Teléfono:</h4>
-                      <p>${phone}</p>
-                </div>
-                <div>
-                    <h4>Mensaje:</h4>
-                    <p class="msj">${message}</p>
-                </div>
-            </section>
-        </div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif;">
+      <tr>
+        <td align="center" bgcolor="#002c69" style="padding: 20px; color: #ffffff;">
+          <h1>PC APPS</h1>
+          <h3 style="font-style: italic;">¡Un nuevo usuario quieren contactarse con usted!</h3>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#f9f9f9" style="padding: 20px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif;">
+            <tr>
+              <td valign="top" style="padding-bottom: 10px;"><strong>Nombre:</strong></td>
+              <td valign="top" style="padding-bottom: 10px; padding-left: 10px;">${name}</td>
+            </tr>
+            <tr>
+              <td valign="top" style="padding-bottom: 10px;"><strong>Email:</strong></td>
+              <td valign="top" style="padding-bottom: 10px; padding-left: 10px;">${email}</td>
+            </tr>
+            <tr>
+              <td valign="top" style="padding-bottom: 10px;"><strong>Teléfono:</strong></td>
+              <td valign="top" style="padding-bottom: 10px; padding-left: 10px;">${phone}</td>
+            </tr>
+            <tr>
+              <td valign="top" style="padding-bottom: 20px;"><strong>Mensaje:</strong></td>
+              <td valign="top" style="text-align: justify; padding-left: 10px;">${message}</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
       </body>
     </html>
     
     `;
 };
-
